@@ -6,17 +6,18 @@ from scrapy.utils.response import open_in_browser
 class DraftSpider(scrapy.Spider):
     name = "draft"
     allowed_domains = ["www.thebaseballcube.com"]
+    year = "2013"
     start_urls = [
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=1&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=2&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=3&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=4&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=5&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=6&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=7&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=8&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=9&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
-    "http://www.thebaseballcube.com/draft/research.asp?Y1=2013&Y2=2013&R=10&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=1&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=2&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=3&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=4&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=5&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=6&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=7&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=8&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=9&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
+    "http://www.thebaseballcube.com/draft/research.asp?Y1="+ year +"&Y2="+ year +"&R=10&RS==&Ov=&Ovs=%3C=&T=&Player=&School=&Pos=&HL=&Region=&P=June-Reg&CT=&Bonus=0&Signed=&Active=&Source=&Bats=&Throws=&Sort=",
 
     ]
     
